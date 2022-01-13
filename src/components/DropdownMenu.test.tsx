@@ -23,7 +23,7 @@ describe("Dropdown Menu component", () => {
 		expect(items[0]).toBeUndefined();
 	});
 
-	it("show the menu items when menu button is clicked once", () => {
+	it("shows the menu items when menu button is clicked once", () => {
 		render(<DropdownMenu />);
 
 		const button = screen.getByRole("button");
