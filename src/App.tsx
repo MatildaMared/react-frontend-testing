@@ -1,15 +1,17 @@
 import "./App.css";
 import Calculator from "./components/Calculator";
-import Navbar from "./components/Navbar";
+import DropdownMenu from "./components/DropdownMenu";
+// import Navbar from "./components/Navbar";
 
 function App() {
 	return (
-    <div className="App">
-      <Navbar items={["Home", "About", "Blog", "Contact"]} />
+		<div className="App">
+			<DropdownMenu />
+			{/* <Navbar items={["Home", "About", "Blog", "Contact"]} /> */}
 			<h1>Hello!</h1>
 			<p>This is a React app with TypeScript.</p>
-      {/* <Counter /> */}
-      <Calculator />
+			{/* <Counter /> */}
+			<Calculator />
 		</div>
 	);
 }

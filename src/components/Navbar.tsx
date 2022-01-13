@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Navbar({items}) {
+function Navbar() {
 	const [activeElement, setActiveElement] = useState("home");
 	return (
 		<ul className="navbar">
