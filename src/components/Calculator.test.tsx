@@ -23,7 +23,23 @@ describe("Calculator component", () => {
 		expect(element).toBeInTheDocument();
 	});
 
-	it("displays the value 0 when user clicks on -1", () => {});
+	it("displays the value 0 when user clicks on -1", () => {
+		render(<Calculator />);
 
-	// displays the value 0 when user clicks on clear
+    const decreaseBtn = screen.getByText("-1");
+    userEvent.click(decreaseBtn);
+
+    const element = screen.getByText(/value: 0/i);
+    expect(element).toBeInTheDocument();
+	});
+
+  it("displays the value 0 when user clicks on clear", () => {
+    render(<Calculator />);
+
+    const clearBtn = screen.getByText(/clear/i);
+    userEvent.click(clearBtn);
+
+    const element = screen.getByText(/value: 0/i);
+    expect(element).toBeInTheDocument();
+  });
 });

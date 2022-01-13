@@ -9,8 +9,8 @@ const Calculator = () => {
 				<h1>Calculator</h1>
 			</header>
 			<main>
-				<button>Clear</button>
-				<button>-1</button>
+				<button onClick={() => setCount(0)}>Clear</button>
+				<button onClick={() => setCount(count - 1)}>-1</button>
 				<button onClick={() => setCount(count + 1)}>+1</button>
 				<p className="result">
 					<code>Value: {count}</code>
