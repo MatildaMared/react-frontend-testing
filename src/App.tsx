@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Calculator from "./components/Calculator";
+import Chat from "./components/chat/Chat";
 // import Dinopedia from "./components/dinosaur/Dinopedia";
 // import DropdownMenu from "./components/DropdownMenu";
 import Navbar from "./components/Navbar";
@@ -17,6 +18,7 @@ function App() {
 			{/* <Counter /> */}
 			<Calculator />
 			{/* <Dinopedia /> */}
+			<Chat />
 		</div>
 	);
 }
