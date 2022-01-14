@@ -64,7 +64,31 @@ const ChatInput = styled.input`
 `;
 
 const Messages = styled.div`
-	border-radius: 1rem;
+	max-height: 300px;
+	overflow-y: scroll;
+	margin-bottom: 0.5rem;
+
+	/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: transparent;
+    border-radius: .5rem;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #eee;
+    border-radius: .5rem;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
 `;
 
 const ChatContainer = styled.div`

@@ -7,18 +7,29 @@ describe("Chat component", () => {
 		render(<Chat />);
 	});
 
-  it("does not show an input field intially", () => {
-    render(<Chat />);
-    const input = screen.queryByPlaceholderText(/Write something../i);
-    expect(input).toBeNull();
-  });
-  
-  it("shows an input field after clicking the button", () => {
-    render(<Chat />);
-    const button = screen.getByRole("button");
-    userEvent.click(button);
+	it("does not show an input field intially", () => {
+		render(<Chat />);
+		const input = screen.queryByPlaceholderText(/Write something../i);
+		expect(input).toBeNull();
+	});
 
-    const input = screen.queryByPlaceholderText(/Write something.../i);
-    expect(input).toBeInTheDocument();
-  })
+	it("shows an input field after clicking the button", () => {
+		render(<Chat />);
+		const button = screen.getByRole("button");
+		userEvent.click(button);
+
+		const input = screen.queryByPlaceholderText(/Write something.../i);
+		expect(input).toBeInTheDocument();
+	});
+
+	it("hides the input field after clicking the button again", () => {
+		render(<Chat />);
+
+		const button = screen.getByRole("button");
+		userEvent.click(button);
+		userEvent.click(button);
+
+		const input = screen.queryByPlaceholderText(/Write something.../i);
+		expect(input).toBeNull();
+	});
 });
