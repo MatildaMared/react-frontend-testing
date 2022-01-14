@@ -32,4 +32,18 @@ describe("Chat component", () => {
 		const input = screen.queryByPlaceholderText(/Write something.../i);
 		expect(input).toBeNull();
 	});
+
+	it("sets emtpies the input field when the user has pressed enter after writing something", () => {
+		render(<Chat />);
+
+		const button = screen.getByRole("button");
+		userEvent.click(button);
+
+		const inputField = screen.queryByPlaceholderText(/Write something.../i);
+		userEvent.type(inputField as HTMLElement, "Testmessage");
+		userEvent.keyboard("{Enter}");
+
+		const writtenText = screen.getByText("Testmessage");
+		expect(writtenText).toBeInTheDocument();
+	});
 });
