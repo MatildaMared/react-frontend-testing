@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Calculator from "./components/Calculator";
+import Cart from "./components/cart/Cart";
 import Chat from "./components/chat/Chat";
 import NameInput from "./components/nameInput/NameInput";
 // import Dinopedia from "./components/dinosaur/Dinopedia";
@@ -19,6 +20,7 @@ function App() {
 			{/* <Counter /> */}
 			<Calculator />
 			<NameInput />
+			<Cart />
 			{/* <Dinopedia /> */}
 			<Chat />
 		</div>
