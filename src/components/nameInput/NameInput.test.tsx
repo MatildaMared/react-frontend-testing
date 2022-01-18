@@ -45,6 +45,6 @@ describe("NameInput component", () => {
 		const input = screen.queryByPlaceholderText(/Ditt Namn/i);
 
 		expect(input).toHaveValue("");
-		expect(screen.getByText("Var vänlig skriv ditt namn")).toBeInTheDocument();
+		expect(screen.getByText(/Var vänlig skriv ditt namn!/i)).toBeInTheDocument();
 	});
 });
